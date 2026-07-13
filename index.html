@@ -932,10 +932,33 @@
 
     /* ── RESPONSIVE ─────────────────────────────────── */
     @media (max-width: 900px) {
-      #inicio { grid-template-columns: 1fr; }
-      .hero-right { min-height: 300px; }
+      /* Evita que el layout de dos columnas del hero deje contenido cortado
+         al pasar a una sola columna: la altura fija + overflow:hidden
+         (pensados para el hero de escritorio) recortaban el texto y la
+         imagen, haciendo que el footer pareciera "encimarse". */
+      html, body { overflow-x: hidden; width: 100%; }
+
+      #inicio {
+        grid-template-columns: 1fr;
+        height: auto;
+        min-height: calc(100vh - 72px);
+        overflow: visible;
+      }
+      .hero-right {
+        min-height: 300px;
+        padding: 0 5vw 3rem;
+      }
       .hero-img-svg { min-height: 300px; }
-      .hero-left { padding: 4rem 5vw; }
+      .hero-img-placeholder { height: auto; max-height: 420px; }
+      .hero-left {
+        padding: 3.5rem 5vw 2rem;
+        text-align: center;
+        align-items: center;
+      }
+      .hero-btns { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .hero-p { max-width: 100%; margin-left: auto; margin-right: auto; }
+      .hero-h1 { font-size: clamp(2rem, 7vw, 2.6rem); }
 
       .nosotros-grid,
       .contacto-grid { grid-template-columns: 1fr; gap: 3rem; }
@@ -946,6 +969,11 @@
       .projects-grid { grid-template-columns: 1fr 1fr; }
 
       .contact-reasons { grid-template-columns: 1fr; }
+
+      /* Asegura que cualquier sección/panel ocupe el ancho completo y quede
+         centrada, evitando que quede pegada a la izquierda con espacio en blanco. */
+      .container { width: 100%; margin-left: auto; margin-right: auto; }
+      section[data-panel] { width: 100%; overflow-x: hidden; }
     }
 
     @media (max-width: 600px) {
@@ -954,6 +982,7 @@
       .projects-grid { grid-template-columns: 1fr; }
       .form-row-2 { grid-template-columns: 1fr; }
       .hero-stats { gap: 1.5rem; }
+      .hero-h1 { font-size: clamp(1.8rem, 8vw, 2.2rem); }
     }
   </style>
 </head>
