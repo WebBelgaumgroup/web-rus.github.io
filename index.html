@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rus Construcciones — Desarrolladora Inmobiliaria</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
   <style>
     /* ── RESET & BASE ────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -45,7 +45,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
+    h1, h2, h3 { font-family: 'Montserrat', 'Inter', sans-serif; letter-spacing: -0.02em; line-height: 1.1; }
 
     a { color: inherit; text-decoration: none; }
 
@@ -171,45 +171,46 @@
     #inicio {
       margin-top: 72px;
       height: calc(100vh - 72px);
-      overflow: hidden;
       display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
+      grid-template-columns: calc(65% - 6cm) 1fr;
     }
 
     .hero-left {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 2.5rem 5vw 2.5rem 7vw;
+      padding: 2.2rem 3.5vw 2.2rem 5vw;
       background: var(--off-white);
-      overflow: hidden;
+      min-width: 0;
     }
 
     .hero-eyebrow {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.7rem;
+      font-family: 'Montserrat', 'Inter', sans-serif;
+      font-size: 0.66rem;
       font-weight: 700;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--green-logo);
       margin-bottom: 1.4rem;
     }
 
     .hero-h1 {
-      font-size: clamp(2.2rem, 3.4vw, 3.3rem);
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.3rem, 3.6vw, 4rem);
       font-weight: 900;
-      line-height: 1.1;
+      line-height: 1.04;
+      letter-spacing: -0.005em;
       color: var(--carbon-dark);
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.3rem;
     }
 
     .hero-h1 .accent { color: var(--green-logo); }
 
     .hero-p {
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       color: var(--carbon-mid);
       max-width: 440px;
-      margin-bottom: 1.8rem;
+      margin-bottom: 1.4rem;
       font-weight: 300;
     }
 
@@ -217,7 +218,7 @@
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
-      margin-bottom: 2.2rem;
+      margin-bottom: 1.6rem;
     }
 
     .btn-primary {
@@ -283,13 +284,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2.5rem 2.5rem 2.5rem 0;
+      padding: 2rem 2.5rem 2rem 0;
+      min-width: 0;
     }
 
     .hero-img-placeholder {
       width: 100%;
-      height: calc(75% + 76px);
-      max-height: 655px;
+      height: 100%;
+      max-height: calc(100vh - 72px - 4rem);
       object-fit: cover;
       display: block;
       border-radius: 16px;
@@ -342,9 +344,10 @@
     }
 
     .section-eyebrow {
-      font-size: 0.7rem;
+      font-family: 'Montserrat', 'Inter', sans-serif;
+      font-size: 0.66rem;
       font-weight: 700;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--green-logo);
       margin-bottom: 0.75rem;
@@ -365,7 +368,8 @@
     }
 
     .nosotros-content h2 {
-      font-size: clamp(2rem, 3vw, 3rem);
+      font-size: clamp(2.3rem, 3.6vw, 4rem);
+      font-weight: 900;
       color: var(--white);
       margin-bottom: 0.5rem;
     }
@@ -489,7 +493,8 @@
     }
 
     .proyectos-header h2 {
-      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-size: clamp(2.3rem, 3.6vw, 4rem);
+      font-weight: 900;
       color: var(--carbon-dark);
       margin-bottom: 0.6rem;
     }
@@ -623,9 +628,9 @@
     }
 
     .project-h3 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Montserrat', 'Inter', sans-serif;
       font-size: 1.15rem;
-      font-weight: 700;
+      font-weight: 800;
       color: var(--carbon-dark);
       margin-bottom: 0.4rem;
       line-height: 1.3;
@@ -687,7 +692,8 @@
     }
 
     .contacto-left h2 {
-      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-size: clamp(2.3rem, 3.6vw, 4rem);
+      font-weight: 900;
       color: var(--carbon-dark);
       margin-bottom: 0.3rem;
     }
@@ -844,17 +850,18 @@
 
     /* ── FOOTER ─────────────────────────────────────── */
     footer {
-      background: #232323;
-      color: rgba(255,255,255,0.5);
-      padding: 4rem 5vw 0;
+      background: #ECEDEA;
+      color: var(--carbon-light);
+      padding: 2rem 5vw 0;
       font-size: 0.85rem;
+      border-top: 1px solid rgba(0,0,0,0.06);
     }
 
     .footer-top {
       display: grid;
       grid-template-columns: 1.4fr 1fr 1fr;
       gap: 3rem;
-      padding-bottom: 3rem;
+      padding-bottom: 1.5rem;
     }
 
     .footer-brand-logo {
@@ -876,7 +883,7 @@
       font-weight: 700;
       font-size: 1.4rem;
       letter-spacing: -0.5px;
-      color: var(--white);
+      color: var(--carbon-dark);
     }
 
     .footer-brand-logo .logo-rus span { color: var(--green-main); }
@@ -885,12 +892,12 @@
       font-size: 0.58rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
+      color: var(--carbon-light);
       font-weight: 500;
     }
 
     .footer-tagline {
-      color: rgba(255,255,255,0.55);
+      color: var(--carbon-mid);
       font-size: 0.9rem;
       line-height: 1.6;
       max-width: 320px;
@@ -902,7 +909,7 @@
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--green-main);
+      color: var(--green-logo);
       margin-bottom: 1.1rem;
     }
 
@@ -913,18 +920,18 @@
       list-style: none;
     }
 
-    .footer-links a { color: rgba(255,255,255,0.55); transition: color 0.2s; }
-    .footer-links a:hover { color: var(--green-main); }
-    .footer-links li { color: rgba(255,255,255,0.55); }
+    .footer-links a { color: var(--carbon-mid); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--green-logo); }
+    .footer-links li { color: var(--carbon-mid); }
 
     .footer-bottom {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 1.5rem 0;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid rgba(0,0,0,0.08);
       font-size: 0.75rem;
-      color: rgba(255,255,255,0.4);
+      color: var(--carbon-light);
     }
 
     /* ── SCROLLED NAV ───────────────────────────────── */
@@ -958,7 +965,7 @@
       .hero-btns { justify-content: center; }
       .hero-stats { justify-content: center; }
       .hero-p { max-width: 100%; margin-left: auto; margin-right: auto; }
-      .hero-h1 { font-size: clamp(2rem, 7vw, 2.6rem); }
+      .hero-h1 { font-size: clamp(2rem, 7vw, 2.6rem); white-space: normal; }
 
       .nosotros-grid,
       .contacto-grid { grid-template-columns: 1fr; gap: 3rem; }
@@ -1012,7 +1019,8 @@
   <div class="hero-left">
     <p class="hero-eyebrow" data-i18n="hero_eyebrow">Desarrolladora Inmobiliaria</p>
     <h1 class="hero-h1">
-      <span class="accent" data-i18n="hero_h1_a">Desarrollamos</span> <span data-i18n="hero_h1_b">presente.</span><br>
+      <span class="accent" data-i18n="hero_h1_a">Desarrollamos</span><br>
+      <span data-i18n="hero_h1_b">presente.</span><br>
       <span data-i18n="hero_h1_c">Construimos futuro.</span>
     </h1>
     <p class="hero-p" data-i18n="hero_p">Más de 20 años en el mercado inmobiliario. Nos enfocamos en activos industriales, comerciales y residenciales.</p>
