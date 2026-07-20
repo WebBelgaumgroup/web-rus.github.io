@@ -167,12 +167,23 @@
     }
     .lang-btn:not(.active):hover { color: var(--green-logo); }
 
+    /* ── FRANJA GRIS BAJO EL NAV ─────────────────────── */
+    .nav-strip {
+      position: fixed;
+      left: 0;
+      right: 0;
+      height: 0.5cm;
+      background: var(--off-white);
+      z-index: 99;
+    }
+
     /* ── HERO ───────────────────────────────────────── */
     #inicio {
       padding-top: 0.5cm;
+      padding-bottom: 0.5cm;
       overflow: hidden;
       display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
+      grid-template-columns: 1.05fr 0.95fr;
       background: var(--off-white);
       box-sizing: border-box;
     }
@@ -181,23 +192,24 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 1.2rem 5vw 1.2rem 7vw;
+      padding: 1rem 5vw 1rem 7vw;
       background: var(--off-white);
       overflow: hidden;
     }
 
     .hero-eyebrow {
       font-family: 'Inter', sans-serif;
-      font-size: 0.7rem;
+      font-size: 0.63rem;
       font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--green-logo);
+      margin-top: 0.25cm;
       margin-bottom: 0.8rem;
     }
 
     .hero-h1 {
-      font-size: clamp(2.2rem, 3.4vw, 3.3rem);
+      font-size: clamp(2.23rem, 3.8vw, 3.43rem);
       font-weight: 900;
       line-height: 1.1;
       color: var(--carbon-dark);
@@ -207,16 +219,16 @@
     .hero-h1 .accent { color: var(--green-logo); }
 
     .hero-p {
-      font-size: 1.05rem;
+      font-size: 1.03rem;
       color: var(--carbon-mid);
-      max-width: 440px;
-      margin-bottom: 1.1rem;
+      max-width: 480px;
+      margin-bottom: 1.2rem;
       font-weight: 300;
     }
 
     .hero-btns {
       display: flex;
-      gap: 1rem;
+      gap: 1.1rem;
       flex-wrap: wrap;
       margin-bottom: 1.3rem;
     }
@@ -224,10 +236,10 @@
     .btn-primary {
       background: var(--carbon-dark);
       color: var(--white);
-      padding: 0.85rem 2rem;
+      padding: 0.9rem 2.1rem;
       border-radius: var(--radius-lg);
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.83rem;
       transition: background 0.2s, transform 0.15s;
       letter-spacing: 0.01em;
     }
@@ -240,10 +252,10 @@
     .btn-outline {
       border: 2px solid var(--carbon-dark);
       color: var(--carbon-dark);
-      padding: 0.85rem 2rem;
+      padding: 0.9rem 2.1rem;
       border-radius: var(--radius-lg);
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.83rem;
       transition: all 0.2s;
     }
 
@@ -255,26 +267,28 @@
 
     .hero-stats {
       display: flex;
-      gap: 2.5rem;
+      justify-content: center;
+      gap: 3.2rem;
+      margin-bottom: 0.5cm;
     }
 
-    .stat-item {}
+    .stat-item { text-align: center; }
 
     .stat-num {
       font-family: 'Playfair Display', serif;
-      font-size: 2rem;
+      font-size: 1.93rem;
       font-weight: 700;
       color: var(--green-logo);
       line-height: 1;
     }
 
     .stat-label {
-      font-size: 0.75rem;
+      font-size: 0.68rem;
       font-weight: 500;
       color: var(--carbon-light);
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      margin-top: 0.25rem;
+      margin-top: 0.3rem;
     }
 
     .hero-right {
@@ -284,7 +298,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2.5rem 2.5rem 2.5rem 0;
+      padding: 2.6rem 3rem 2.6rem 1.5rem;
     }
 
     .hero-img-placeholder {
@@ -844,9 +858,9 @@
 
     /* ── FOOTER ─────────────────────────────────────── */
     footer {
-      background: linear-gradient(to bottom, #ffffff 0cm, #ffffff 2cm, #232323 2cm, #232323 100%);
+      background: var(--carbon-dark);
       color: rgba(255,255,255,0.5);
-      padding: calc(2cm + 2.5rem) 5vw 0;
+      padding: 4.5rem 5vw 0;
       font-size: 0.85rem;
     }
 
@@ -854,7 +868,7 @@
       display: grid;
       grid-template-columns: 1.4fr 1fr 1fr;
       gap: 3rem;
-      padding-bottom: calc(3rem - 1cm);
+      padding-bottom: 2rem;
     }
 
     .footer-brand {
@@ -1008,14 +1022,14 @@
     </li>
   </ul>
 </nav>
-
+<div id="navStrip" class="nav-strip"></div>
 
 <!-- ═══ 01 — HERO ════════════════════════════════════════ -->
 <section id="inicio" data-panel="inicio">
   <div class="hero-left">
     <p class="hero-eyebrow" data-i18n="hero_eyebrow">Desarrolladora Inmobiliaria</p>
     <h1 class="hero-h1">
-      <span class="accent" data-i18n="hero_h1_a">Desarrollamos</span> <span data-i18n="hero_h1_b">presente.</span><br>
+      <span class="accent" data-i18n="hero_h1_a">Desarrollamos</span> <span class="accent" data-i18n="hero_h1_b">presente.</span><br>
       <span data-i18n="hero_h1_c">Construimos futuro.</span>
     </h1>
     <p class="hero-p" data-i18n="hero_p">Más de 20 años en el mercado inmobiliario. Nos enfocamos en activos industriales, comerciales y residenciales.</p>
@@ -1409,10 +1423,13 @@
 
   // ── Ajuste exacto del alto del hero (evita desajustes de 100vh) ──
   const heroInicio = document.getElementById('inicio');
+  const navStrip = document.getElementById('navStrip');
   function sizeHero() {
     const navH = nav.getBoundingClientRect().height;
-    heroInicio.style.marginTop = navH + 'px';
-    heroInicio.style.height = (window.innerHeight - navH) + 'px';
+    navStrip.style.top = navH + 'px';
+    const stripH = navStrip.getBoundingClientRect().height;
+    heroInicio.style.marginTop = (navH + stripH) + 'px';
+    heroInicio.style.minHeight = (window.innerHeight - navH - stripH) + 'px';
   }
   sizeHero();
   window.addEventListener('resize', sizeHero);
