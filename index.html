@@ -264,7 +264,7 @@
       padding-bottom: 0.5cm;
       overflow: hidden;
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
+      grid-template-columns: 1.25fr 0.75fr;
       background: var(--off-white);
       box-sizing: border-box;
     }
@@ -273,7 +273,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 1rem 5vw 1rem 7vw;
+      padding: 1rem 5vw 1rem 5vw;
       background: var(--off-white);
       overflow: hidden;
     }
@@ -290,12 +290,14 @@
     }
 
     .hero-h1 {
-      font-size: clamp(2.23rem, 3.8vw, 3.43rem);
+      font-size: clamp(2.1rem, 3.4vw, 2.9rem);
       font-weight: 900;
       line-height: 1.1;
       color: var(--carbon-dark);
       margin-bottom: 0.8rem;
     }
+
+    .hero-h1-line1 { white-space: nowrap; }
 
     .hero-h1 .accent { color: var(--green-logo); }
 
@@ -379,7 +381,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2.6rem 3rem 2.6rem 1.5rem;
+      padding: 2.6rem 3rem 2.6rem 0;
+      margin-left: -3cm;
     }
 
     .hero-img-placeholder {
@@ -1122,7 +1125,7 @@
   <div class="hero-left">
     <p class="hero-eyebrow" data-i18n="hero_eyebrow">Desarrolladora Inmobiliaria</p>
     <h1 class="hero-h1">
-      <span class="accent" data-i18n="hero_h1_a">Desarrollamos</span> <span class="accent" data-i18n="hero_h1_b">presente.</span><br>
+      <span class="hero-h1-line1"><span class="accent" data-i18n="hero_h1_a">Desarrollamos</span> <span class="accent" data-i18n="hero_h1_b">presente.</span></span><br>
       <span data-i18n="hero_h1_c">Construimos futuro.</span>
     </h1>
     <p class="hero-p" data-i18n="hero_p">Más de 20 años en el mercado inmobiliario. Nos enfocamos en activos industriales, comerciales y residenciales.</p>
